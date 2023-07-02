@@ -3,35 +3,51 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 
-/* const heading = React.createElement("h1", {id: "head"}, "hello world from React!");
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading); */
+// JSX (Transpiled before it reaches the JS engine) - Parcel - Babel
 
-/* <div id="parent">
-    <div id="child1">
-        <h1>I am h1 tag</h1>
-        <h2>I am h2 tag</h2>
+// JSX => Babel transpiled it to => React.createElement => JS object => HTML Element(render)
+
+const Title = () => (<h1 id="head">Namste React using JSX 🚀</h1>) 
+const tips = (
+  <h1>Hello Bhavya </h1>
+) 
+
+const number = 1000;
+
+// Component composition 
+const HeadingComponent2 = () => (
+  <div id="container">
+    <Title />
+    {Title()}
+    <Title></Title>
+    <h1>{number}</h1>
+    <h1>{500 + 450}</h1>
+    {tips}
+    {tips}
+    {tips}
+    <h1 className="head">
+      Namste React Functional Component while using multiple lines{" "}
+    </h1>
+  </div>
+);
+
+
+// React Fragment - behave like an empty tag
+const HeadingComponent3 = () => (
+  <>
+    <div id="container">
+      <h1 className="head">
+        example of react fragment
+      </h1>
     </div>
-    <div id="child2">
-        <h1>I am h1 tag</h1>
-        <h2>I am h2 tag</h2>
+    <div>
+      <h1>Helo</h1>
     </div>
-</div>
- */
+  </>
+);
 
 
-// Nested structure inside React
+const root = ReactDOM.createRoot(document.getElementById("root"))
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child 1" }, [
-    React.createElement("h1", {}, "I am h1 tag"),
-    React.createElement("h2", {}, "I am h2 tag"),
-  ]),
-  React.createElement("div", { id: "child 2" }, [
-    React.createElement("h1", {}, "I am h1 tag"),
-    React.createElement("h2", {}, "I am h2 tag"),
-  ]),
-]);
+root.render(<HeadingComponent2 />)
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
