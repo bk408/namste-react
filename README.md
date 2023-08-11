@@ -66,3 +66,8 @@
   Most Important Hooks
   - useState => It gives us Superpowerful varible in React
   - useEffect
+
+
+  # 2 Types Routing in web apps
+  - Client side routing
+  - Server side routing
