@@ -60,7 +60,7 @@ const Body = () => {
             }}
           />
           <button
-            className="px-4 py-2 m-2 bg-green-200 rounded-lg"
+            className="px-4 py-2 m-2 bg-green-200 rounded-lg hover:bg-green-300"
             onClick={() => {
               console.log(searchText);
 
@@ -76,7 +76,7 @@ const Body = () => {
         </div>
         <div className="search m-4 p-4">
           <button
-            className="px-4 py-2 m-2 bg-gray-100 rounded-lg"
+            className="px-4 py-2 m-2 bg-gray-200 rounded-lg hover:bg-gray-300"
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
                 (res) => res.info.avgRating > 4
