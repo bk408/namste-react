@@ -1,16 +1,17 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 //import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
-
 const Body = () => {
   let [listOfRestaurants, setListOfRestraunt] = useState([]);
   let [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
   let [searchText, setsearchText] = useState("");
+
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   console.log("body rendered");
 
@@ -41,7 +42,8 @@ const Body = () => {
   if (OnlineStatus === false)
     return (
       <h1>
-        Seems like your internet is not working. Kindly check your internet connectivity !!!
+        Seems like your internet is not working. Kindly check your internet
+        connectivity !!!
       </h1>
     );
 
@@ -94,7 +96,11 @@ const Body = () => {
             key={restaurant?.info.id}
             to={"/restaurants/" + restaurant?.info.id}
           >
-            <RestaurantCard resData={restaurant?.info} />
+            {restaurant.info.promoted ? (
+              <RestaurantCardPromoted resData={restaurant?.info} />
+            ) : (
+              <RestaurantCard resData={restaurant?.info} />
+            )}
           </Link>
         ))}
       </div>
