@@ -1,8 +1,11 @@
 
 
+
 import User from "./User";
 import UserClass from "./UserClass";
-import {Component} from "react";
+import { Component } from "react";
+import UserContext from "../utils/UserContext";
+
 
 
 class About extends Component{
@@ -27,6 +30,14 @@ class About extends Component{
              <UserClass name={"Donald Trump"} location={"Alwar"} />
              <UserClass name={"Mota Bhai"} location={"Noida"} />
              <UserClass name={"Lapoo Sachin"} location={"Bihar"} />
+             
+             <div>
+               <h1>
+                 <UserContext.Consumer>
+                   {({loggedInUser}) => <h1 className="text-lg font-bold">{loggedInUser }</h1>}
+                 </UserContext.Consumer>
+               </h1>
+             </div>
            </div>
          );
     }
