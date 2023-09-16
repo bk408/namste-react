@@ -7,6 +7,7 @@ import { useState } from "react";
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const [showIndex, SetShowIndex] = useState(null);
+  
 
   const resInfo = useRestaurantMenu(resId);
 
@@ -53,6 +54,8 @@ const RestaurantMenu = () => {
       <p className="font-bold text-lg text-gray-600">
         {cuisines.join(", ")} - {costForTwoMessage}
       </p>
+
+
 
       {categories.map((category, index) => (
         <RestaurantCategory
