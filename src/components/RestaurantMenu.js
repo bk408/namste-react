@@ -6,8 +6,7 @@ import { useState } from "react";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
-  const [showIndex, SetShowIndex] = useState(null)
- 
+  const [showIndex, SetShowIndex] = useState(null);
 
   const resInfo = useRestaurantMenu(resId);
 
@@ -18,15 +17,14 @@ const RestaurantMenu = () => {
 
   const { itemCards } =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
-    
-  
-   const categories =
-     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
-       (c) =>
-         c.card?.card?.["@type"] ===
-         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+
+  const categories =
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-  
+
   console.log(categories);
 
   return (
@@ -60,8 +58,14 @@ const RestaurantMenu = () => {
         <RestaurantCategory
           key={category?.card?.card.title}
           data={category?.card?.card}
-          showItems={index === showIndex ? true : false}
-          SetShowIndex={() => SetShowIndex(index)}
+          showItems={index === showIndex}
+          SetShowIndex={() => {
+            if (index === showIndex) {
+              SetShowIndex(null); // Close the currently open accordion
+            } else {
+              SetShowIndex(index); // Open the clicked accordion
+            }
+          }}
         />
       ))}
     </div>
