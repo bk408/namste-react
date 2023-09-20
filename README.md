@@ -68,6 +68,16 @@
   - Client side routing
   - Server side routing
 
-  # React life cylcle method Diagram
+  # React life Cycle method Diagram
 
   - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+  # Redux ToolKit
+
+  - Install @reduxjs/toolkit and react-redux
+  - Build our store
+  - Connect our store to our app
+  - Slice (cartSlice)
+  - dispatch(action)
+  - Selector
+
