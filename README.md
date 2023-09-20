@@ -5,7 +5,8 @@
 - Dev Build
 - Local Server
 - HMR - Hot Module Replacement
-- File watching algorithm => written in c++
+- File watching algorithm => written in C++![react-lifecycle-methods-diagram](https://github.com/bk408/namste-react/assets/116827830/79233dae-7db6-476f-bcef-dfe278e3b3e7)
+
 - Caching => Faster Builds
 - Image Optimization
 - Minification
@@ -13,12 +14,12 @@
 - Compressing
 - Consistent Hashing
 - Code Splitting
-- Diffrencial Bundling - Support older browsers
+- Differential Bundling - Support older browsers
 - Diagnostic
 - Error Handling
 - HTTPS
 - Tree Shaking => removed unused code
-- Diffrent dev and production bundles
+- Different dev and production bundles
 
 # Namste Food
 
@@ -28,11 +29,11 @@
 - - logo
 - - Nav items
 - body
-- - search
+- - Search
 - - Restaurant container
 - - Restaurant card
 -     -img
--     -Name of Res, Star rating, cuisine, delivery time etc
+-     -Name of Res, Star rating, cuisine, delivery time, etc
 -
 -
 - Footer
@@ -47,7 +48,7 @@
   - Default Export/Import
 
   export default component;
-  import componenet from "path"
+  import component from "path"
 
   - Named Export/Import
 
@@ -60,15 +61,15 @@
 
   Most Important Hooks
 
-  - useState => It gives us Superpowerful varible in React
+  - useState => It gives us Superpowerful variable in React
   - useEffect
 
-  # 2 Types Routing in web apps
+  # 2 Types of Routing in web apps
 
-  - Client side routing
-  - Server side routing
+  - Client-side routing
+  - Server-side routing
 
-  # React life Cycle method Diagram
+
 
   - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
