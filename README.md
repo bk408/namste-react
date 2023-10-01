@@ -61,7 +61,7 @@
 
   Most Important Hooks
 
-  - useState => It gives us Superpowerful variable in React
+  - useState => It gives us Superpower full variable in React
   - useEffect
 
   # 2 Types of Routing in web apps
@@ -81,4 +81,21 @@
   - Slice (cartSlice)
   - dispatch(action)
   - Selector
+
+
+  # Types of testing (developer)
+
+  - Unit Testing
+  - Integration Testing
+  - End to End Testing / e2e testing
+
+  # Setting up Testing in our app
+
+  - Install React Testing Library
+  - Installed Jest
+  - Install Babel Dependencies  (From Jest Website)
+  - Configure Babel
+  - Configure Parcel config file to disable default babel transpilation 
+  - Jest Configuration  (npx jest --init)
+  - Install jsdom library 
 
