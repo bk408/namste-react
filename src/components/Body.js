@@ -2,6 +2,7 @@ import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 //import resList from "../utils/mockData";
 import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
+import React from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
