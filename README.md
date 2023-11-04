@@ -7,6 +7,7 @@
 - HMR - Hot Module Replacement
 - File watching algorithm => written in C++![react-lifecycle-methods-diagram](https://github.com/bk408/namste-react/assets/116827830/79233dae-7db6-476f-bcef-dfe278e3b3e7)
 
+
 - Caching => Faster Builds
 - Image Optimization
 - Minification
